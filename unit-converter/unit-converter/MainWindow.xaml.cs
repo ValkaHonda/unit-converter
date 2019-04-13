@@ -20,14 +20,17 @@ namespace unit_converter
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Converter lengthConverter;
         public MainWindow()
         {
             InitializeComponent();
+            this.lengthConverter = new LengthConverter();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Button1");
+            String fromStr = lenFrom.Text;
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)

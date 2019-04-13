@@ -28,9 +28,9 @@
                     <ComboBoxItem Content = "centimeters"/>
                     <ComboBoxItem Content = "millimeters"/>
                 </ComboBox>
-                <TextBox Grid.Row="1" Grid.Column="0"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="0" Name="lenFrom"></TextBox>
                 <Button Grid.Row="1" Grid.Column="2" Click="Button_Click_1">convert</Button>
-                <TextBox Grid.Row="1" Grid.Column="3" Margin="10 0 10 0"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="3" Margin="10 0 10 0" Name="lenTo"></TextBox>
                 <ComboBox Grid.Row="1" Grid.Column="4" SelectedIndex="0">
                     <ComboBoxItem Content = "meters"/>
                     <ComboBoxItem Content = "centimeters"/>
@@ -57,9 +57,9 @@
                     <ComboBoxItem Content = "farenheit"/>
                     <ComboBoxItem Content = "kelvins"/>
                 </ComboBox>
-                <TextBox Grid.Row="1" Grid.Column="0"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="0" Name="tempFrom"></TextBox>
                 <Button Grid.Row="1" Grid.Column="2" Margin="0 0 10 0" Click="Button_Click_2">convert</Button>
-                <TextBox Grid.Row="1" Grid.Column="3" Margin="0 0 10 0"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="3" Margin="0 0 10 0" Name="tempTo"></TextBox>
                 <ComboBox Grid.Row="1" Grid.Column="4" SelectedIndex="0">
                     <ComboBoxItem Content = "celsius"/>
                     <ComboBoxItem Content = "farenheit"/>
@@ -86,9 +86,9 @@
                     <ComboBoxItem Content = "kilograms"/>
                     <ComboBoxItem Content = "grams"/>
                 </ComboBox>
-                <TextBox Grid.Row="1" Grid.Column="0"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="0" Name="weightFrom"></TextBox>
                 <Button Grid.Row="1" Grid.Column="2" Click="Button_Click_3">convert</Button>
-                <TextBox Grid.Row="1" Grid.Column="3" Margin="10 0 10 0"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="3" Margin="10 0 10 0" Name="weightTo"></TextBox>
                 <ComboBox Grid.Row="1" Grid.Column="4" SelectedIndex="0">
                     <ComboBoxItem Content = "tons"/>
                     <ComboBoxItem Content = "kilograms"/>
@@ -115,9 +115,9 @@
                     <ComboBoxItem Content = "hectopascal"/>
                     <ComboBoxItem Content = "kilopascal"/>
                 </ComboBox>
-                <TextBox Grid.Row="1" Grid.Column="0"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="0" Name="pressureFrom"></TextBox>
                 <Button Grid.Row="1" Grid.Column="2" Click="Button_Click_4">convert</Button>
-                <TextBox Grid.Row="1" Grid.Column="3" Margin="10 0 10 0"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="3" Margin="10 0 10 0" Name="pressureTo"></TextBox>
                 <ComboBox Grid.Row="1" Grid.Column="4" SelectedIndex="0">
                     <ComboBoxItem Content = "pascal"/>
                     <ComboBoxItem Content = "hectopascal"/>
