@@ -24,5 +24,23 @@ namespace unit_converter
         {
             InitializeComponent();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Button1");
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Button2");
+        }
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Button3");
+        }
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Button4");
+        }
     }
 }
