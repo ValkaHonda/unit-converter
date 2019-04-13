@@ -21,10 +21,12 @@ namespace unit_converter
     public partial class MainWindow : Window
     {
         private Converter lengthConverter;
+        private Converter temperatureConverter;
         public MainWindow()
         {
             InitializeComponent();
             this.lengthConverter = new LengthConverter();
+            this.temperatureConverter = new TemperatureConverter();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -39,7 +41,12 @@ namespace unit_converter
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Button2");
+            String fromType = tempComboTypeFrom.Text;
+            String toType = tempComboTypeTo.Text;
+            String fromStr = tempFromValue.Text;
+            double fromValue = double.Parse(fromStr);
+            double result = temperatureConverter.convert(fromType, toType, fromValue);
+            tempToValue.Text = result.ToString();
         }
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {

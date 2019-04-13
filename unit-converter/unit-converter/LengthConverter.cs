@@ -15,7 +15,7 @@ namespace unit_converter
             return convertedValue;
 
         }
-        public double getBaseValue(String from, double value)
+        private double getBaseValue(String from, double value)
         {
             switch(from){
                 case "meters":
@@ -28,7 +28,7 @@ namespace unit_converter
                     return value;
             }
         }
-        public double convertTo(String to, double baseValue)
+        private double convertTo(String to, double baseValue)
         {
             switch (to)
             {
