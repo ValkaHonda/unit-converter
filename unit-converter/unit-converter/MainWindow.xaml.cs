@@ -29,8 +29,12 @@ namespace unit_converter
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Button1");
+            String fromType = lenComboFrom.Text;
+            String toType = lenComboTo.Text;
             String fromStr = lenFrom.Text;
+            double fromValue = double.Parse(fromStr);
+            double result = lengthConverter.convert(fromType, toType, fromValue);
+            lenTo.Text = result.ToString();
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
