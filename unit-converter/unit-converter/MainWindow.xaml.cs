@@ -50,7 +50,12 @@ namespace unit_converter
         }
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Button3");
+            String fromType = WeightComboFromType.Text;
+            String toType = WeightComboToType.Text;
+            String fromStr = weightFrom.Text;
+            double fromValue = double.Parse(fromStr);
+            double result = temperatureConverter.convert(fromType, toType, fromValue);
+            weightTo.Text = result.ToString();
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
