@@ -59,7 +59,12 @@ namespace unit_converter
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Button4");
+            String fromType = preComboFromType.Text;
+            String toType = preComboToType.Text;
+            String fromStr = pressureFrom.Text;
+            double fromValue = double.Parse(fromStr);
+            double result = temperatureConverter.convert(fromType, toType, fromValue);
+            pressureTo.Text = result.ToString();
         }
     }
 }
