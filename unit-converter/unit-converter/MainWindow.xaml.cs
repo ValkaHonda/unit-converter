@@ -22,15 +22,15 @@ namespace unit_converter
     {
         private Converter lengthConverter;
         private Converter temperatureConverter;
-        private Converter WeightConverter;
-        private Converter PressureConverter;
+        private Converter weightConverter;
+        private Converter pressureConverter;
         public MainWindow()
         {
             InitializeComponent();
             this.lengthConverter = new LengthConverter();
             this.temperatureConverter = new TemperatureConverter();
-            this.WeightConverter = new WeightConverter();
-            this.PressureConverter = new PresureConverter();
+            this.weightConverter = new WeightConverter();
+            this.pressureConverter = new PresureConverter();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -49,7 +49,7 @@ namespace unit_converter
             String toType = tempComboTypeTo.Text;
             String fromStr = tempFromValue.Text;
             double fromValue = double.Parse(fromStr);
-            double result = PressureConverter.convert(fromType, toType, fromValue);
+            double result = temperatureConverter.convert(fromType, toType, fromValue);
             tempToValue.Text = result.ToString();
         }
         private void Button_Click_3(object sender, RoutedEventArgs e)
@@ -58,7 +58,7 @@ namespace unit_converter
             String toType = WeightComboToType.Text;
             String fromStr = weightFrom.Text;
             double fromValue = double.Parse(fromStr);
-            double result = PressureConverter.convert(fromType, toType, fromValue);
+            double result = weightConverter.convert(fromType, toType, fromValue);
             weightTo.Text = result.ToString();
         }
         private void Button_Click_4(object sender, RoutedEventArgs e)
@@ -67,7 +67,7 @@ namespace unit_converter
             String toType = preComboToType.Text;
             String fromStr = pressureFrom.Text;
             double fromValue = double.Parse(fromStr);
-            double result = PressureConverter.convert(fromType, toType, fromValue);
+            double result = pressureConverter.convert(fromType, toType, fromValue);
             pressureTo.Text = result.ToString();
         }
     }
